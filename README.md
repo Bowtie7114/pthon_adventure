@@ -31,7 +31,10 @@
 
 ## Logical Flow
 Main Menu:<br>
-![Flowchart Main Menu](docs/readme_images/flow_main_menu.PNG)
+![Flowchart Main Menu](docs/readme_images/flow_main_menu.PNG)<br><br>
+
+First Room:<br>
+![Flowchart First Room](docs/readme_images/flow_first_room.PNG)
 
 ## Database Design
 
