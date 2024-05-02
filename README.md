@@ -30,6 +30,8 @@
 ## Structure
 
 ## Logical Flow
+Main Menu:<br>
+![Flowchart Main Menu](docs/readme_images/flow_main_menu.PNG)
 
 ## Database Design
 
