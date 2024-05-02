@@ -34,7 +34,16 @@ Main Menu:<br>
 ![Flowchart Main Menu](docs/readme_images/flow_main_menu.PNG)<br><br>
 
 First Room:<br>
-![Flowchart First Room](docs/readme_images/flow_first_room.PNG)
+![Flowchart First Room](docs/readme_images/flow_first_room.PNG)<br><br>
+
+Second Room:<br>
+![Flowchart Second Room](docs/readme_images/flow_second_room.PNG)<br><br>
+
+Secret Room:<br>
+![]()<br><br>
+
+Final Room:<br>
+![]()<br><br>
 
 ## Database Design
 
