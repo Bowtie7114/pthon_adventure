@@ -40,10 +40,10 @@ Second Room:<br>
 ![Flowchart Second Room](docs/readme_images/flow_second_room.PNG)<br><br>
 
 Secret Room:<br>
-![]()<br><br>
+![Flowchart Secret Room](docs/readme_images/flow_secret_room.PNG)<br><br>
 
 Final Room:<br>
-![]()<br><br>
+![Flowchart Final Room](docs/readme_images/flow_final_room.PNG)<br><br>
 
 ## Database Design
 
