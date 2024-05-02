@@ -34,6 +34,14 @@
 ## Database Design
 
 ## Technologies
+- Python:
+    Used as the primary programming language for the entire project, except the pre-defined packages.
+- Gitpod:
+    Used as the IDE to write, test, and modify the programme.
+- Github:
+    Used as the repository to store the code and README.
+- Heroku:
+    Used as the hosting platform, allowing Users to activate the program in their web browser.
 
 ## Testing
 
