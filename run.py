@@ -8,8 +8,8 @@ def main_menu():
     Continue and load the previous save file, or the help menu for information
     on how to play the game.
     """
-    print("Welcome to P-thon, a short Python console-based adventure game. \n")
-    print("Please enter 1 for New Game, 2 to Continue, or 3 for the How to Play. \n")
+    print("Welcome to P-thon, a short Python console-based adventure game.")
+    print("Please enter 1 for New Game, 2 to Continue, or 3 for the How to Play.")
     print("If this is your first time, please check the How to Play first. \n")
 
     while True:
@@ -48,7 +48,16 @@ def how_to_play():
     Set of instruction paragraphs on how to play P-thon. User must select Enter key to 
     end function and move back to main_menu().
     """
-    print("How to Play")
+    print("P-thon is a text-based mini-adventure played entirely in the console. \n")
+    print("You will need to type numbers when prompted to make decisions ")
+    print("and some progress will be locked if you do not try everything. \n")
+    print("When you select a New Game for the first time, you will download a save file.")
+    print("Your progress will auto-save each room, so you can stop and come back,")
+    print("but do not delete the pthon_save.txt in your downloads folder or you")
+    print("will need to start from the beginning. \n")
+    print("Have fun! When you are ready, press 'Enter' to go back to the Main Menu.")
+    input("Press Enter to continue...")
+    main_menu()
 
 def first_room():
     """
