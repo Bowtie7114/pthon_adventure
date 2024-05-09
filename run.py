@@ -31,7 +31,18 @@ def main_menu():
         else:
             print(e)
 
+def continue_game():
+    """
+    Functions looks through downloads folder of User PC for save file. If once does not
+    exist, flags error and re-directs to main_menu(). If it does, read room function saved
+    and appropriate function.
+    """
 
+def how_to_play():
+    """
+    Set of instruction paragraphs on how to play P-thon. User must select Enter key to 
+    end function and move back to main_menu().
+    """
 
 def first_room():
     """
