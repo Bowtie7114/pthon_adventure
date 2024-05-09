@@ -16,11 +16,11 @@ def main_menu():
         choice = int(input("Press the 'Enter' key after making your selection. \n"))
         
         if choice == 1:
-            print("Test 1")
+            first_room()
         elif choice == 2:
-            print("Test 2")
+            continue_game()
         elif choice == 3:
-            print("Test 3")
+            how_to_play()
         else:
             raise ValueError (
                 f"{choice} is not a valid option. Please try again."
@@ -32,12 +32,14 @@ def main_menu():
             print(e)
 
 
+
 def first_room():
     """
     First room function, introduces user to Move and Look options. Move progresses
     to second_room() whilst Look activates first_room_look(). User can use Move without
     the Look function.
     """
+    print("Lol can has cheeseburger")
 
 def first_room_look():
     '''
