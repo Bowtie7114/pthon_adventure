@@ -12,24 +12,28 @@ def main_menu():
     print("Please enter 1 for New Game, 2 to Continue, or 3 for the How to Play. \n")
     print("If this is your first time, please check the How to Play first. \n")
 
-    try:
-        choice = int(input("Press the 'Enter' key after making your selection. \n"))
-        
-        if choice == 1:
-            first_room()
-        elif choice == 2:
-            continue_game()
-        elif choice == 3:
-            how_to_play()
-        else:
-            raise ValueError (
-                f"{choice} is not a valid option. Please try again."
-            )
-    except ValueError as e:
-        if "literal" in str(e):
-            print(f"Invalid data: {e}, please use a number.\n")
-        else:
-            print(e)
+    while True:
+        try:
+            choice = int(input("Press the 'Enter' key after making your selection. \n"))
+            
+            if choice == 1:
+                first_room()
+                break
+            elif choice == 2:
+                continue_game()
+                break
+            elif choice == 3:
+                how_to_play()
+                break
+            else:
+                raise ValueError (
+                    f"{choice} is not a valid option. Please try again. \n"
+                )
+        except ValueError as e:
+            if "literal" in str(e):
+                print(f"Invalid data: {e}, please use a number.\n")
+            else:
+                print(e)
 
 def continue_game():
     """
@@ -37,12 +41,14 @@ def continue_game():
     exist, flags error and re-directs to main_menu(). If it does, read room function saved
     and appropriate function.
     """
+    print("Continue Game")
 
 def how_to_play():
     """
     Set of instruction paragraphs on how to play P-thon. User must select Enter key to 
     end function and move back to main_menu().
     """
+    print("How to Play")
 
 def first_room():
     """
