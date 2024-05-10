@@ -212,6 +212,39 @@ def final_room():
     Should User have secret_room_item they will get the option to use it, immediately succeeding the fight.
     Upon succeeding, credits roll and main_menu() is loaded.
     '''
+
+    print("You finally reach the final room on of this admittedly small dungeon. \n")
+    input("Press Enter to continue... \n")
+    print("The walls are an obsidian black, bright red sconces peppering the walls,")
+    print("and at the back of the room in front of an ornate door, a robed figure stands. \n")
+    input("Press Enter to continue... \n")
+    print("You feel nervous; your bones shaking as you stare at the hooded spectre.")
+    print("Steeling yourself, take a step towards the entity... And they speak... \n")
+    input("Press Enter to continue... \n")
+    print('"Ah! There you are, at last, Skelley-lad!" \n')
+    print("You stare dumbfounded at the now un-hooded old man in front of you.")
+    print("He seems ancient; valley-like wrinkles cover his face, three teeth")
+    print("make up his smile, and you are unsure, but you think he is also blind. \n")
+    input("Press Enter to continue... \n")
+    print("As he walks towards you, he bumps into a table. Definitely blind.")
+    print('"Oh, blasted thing. I swore I moved that aside. Now, Skelly-lad." \n')
+    input("Press Enter to continue... \n")
+    print("If you could roll your eyes at the name, you would.")
+    print('"You are dead. If you didnt guess already, but I brought you back!"')
+    print('"Got rid of all that pesky skin for ya too. I will take my thanks now." \n')
+    input("Press Enter to continue... \n")
+    print("The only thought racing through your mind is that he did this to you.")
+    print("If he brought you back, then taking him out will end your suffering.")
+    print("You ready your stance, and the Old Necromancer notices the shift.")
+    input("Press Enter to continue... \n")
+    print('"Oh, so thats how you want to play? Fine."')
+    print("The air pressure, the mood, your calm - it all changes in an instant.")
+    print("The Old Man is preparing to fight you with everything he has.")
+    print("What will you do?")
+    input("Press Enter to continue... \n")
+    print("1: Fight")
+    print("2: Surrender")
+
     if inventory["secret_item"] == True:
         print("Oh shit, he's got a gun!")
     else:
