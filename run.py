@@ -49,14 +49,20 @@ def how_to_play():
     end function and move back to main_menu().
     """
     print("P-thon is a text-based mini-adventure played entirely in the console. \n")
+    input("Press Enter to continue... \n")
     print("You will need to type numbers when prompted to make decisions ")
     print("and some progress will be locked if you do not try everything. \n")
-    print("When you select a New Game for the first time, you will download a save file.")
+    input("Press Enter to continue... \n")
+    print("When you select a New Game for the first time, you will be prompted to")
+    print("download a save file that will also double as your inventory storage. \n")
+    input("Press Enter to continue... \n")
+    print("Please save this file to your Downloads folder, not inside another folder.")
     print("Your progress will auto-save each room, so you can stop and come back,")
-    print("but do not delete the pthon_save.txt in your downloads folder or you")
+    print("but do not delete the pthon_save.txt in your Downloads folder or you")
     print("will need to start from the beginning. \n")
+    input("Press Enter to continue... \n")
     print("Have fun! When you are ready, press 'Enter' to go back to the Main Menu.")
-    input("Press Enter to continue...")
+    input("Press Enter to continue... \n")
     main_menu()
 
 def first_room():
