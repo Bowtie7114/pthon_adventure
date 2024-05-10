@@ -66,6 +66,7 @@ Adding a break after each option removed the infinite loop.
 ## Deployment
 
 ## Credits
+- Code institute for providing the pre-installed code to run the code via browser-based terminal.
 - Fiancé [Magdalena]() for assistance with Python syntax (if "literal" in str(e): in main_menu())
 
 
