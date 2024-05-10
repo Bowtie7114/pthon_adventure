@@ -31,7 +31,7 @@ def main_menu():
                 )
         except ValueError as e:
             if "literal" in str(e):
-                print(f"Invalid data: {e}, please use a number.\n")
+                print(f"Invalid data: {e}, please use a number (1-3).\n")
             else:
                 print(e)
 
@@ -85,6 +85,28 @@ def first_room():
     print("There is a door at the far end of the room, but there may also be")
     print("something else here if you search for it. \n")
     input("Press Enter to continue... \n")
+    print("1: Move through the door.")
+    print("2: Look around the room.")
+
+    while True:
+        try:
+            choice = int(input("Press the 'Enter' key after making your selection. \n"))
+            
+            if choice == 1:
+                second_room()
+                break
+            elif choice == 2:
+                first_room_look()
+                break            
+            else:
+                raise ValueError (
+                    f"{choice} is not a valid option. Please try again. \n"
+                )
+        except ValueError as e:
+            if "literal" in str(e):
+                print(f"Invalid data: {e}, please use a number (1-2).\n")
+            else:
+                print(e)
 
 
 def first_room_look():
@@ -92,6 +114,7 @@ def first_room_look():
     Provides user with sword which is written to the user's inventory. The moves user
     automatically to second_room().
     '''
+    print("Ooh, they be LOOKIN'")
 
 def second_room():
     '''
@@ -99,6 +122,7 @@ def second_room():
     sequence with options to Fight or Defend when Move option selected. If user defends, they fail. 
     If they attack without a sword, they fail. If they attack with a sword, they succeed.
     '''
+    print("Movin' on? Potentially a mistake")
 
 def second_room_look():
     '''
