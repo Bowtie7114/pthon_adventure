@@ -2,6 +2,8 @@
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
+import os
+
 def main_menu():
     """
     Main menu function when the program loads. Allows the user to select New Game,
@@ -74,7 +76,9 @@ def first_room():
 
     print("Creating save file... \n")
 
-    with open("pthon_save.txt", "x") as save_file:
+    path = os.path.join(os.environ["USERPROFILE"], "Downloads")
+
+    with open(os.path.join(path, "pthon_save.txt"), "x") as save_file:
         save_file.write("first_room")
 
     print("....... \n")
