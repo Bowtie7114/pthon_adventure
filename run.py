@@ -146,7 +146,18 @@ def second_room():
     sequence with options to Fight or Defend when Move option selected. If user defends, they fail. 
     If they attack without a sword, they fail. If they attack with a sword, they succeed.
     '''
-    print("Movin' on? Potentially a mistake")
+    print("As you walk through the corridor to the next room, you have a thought:")
+    print("You are a skeleton. \n")
+    input("Press Enter to continue... \n")
+    print("You are not sure how, or why, but you are a reanimated skeleton.")
+    print("No memories, no voice, no skin... No way to live, in your opinion.")
+    print("Maybe if you find who did this, you can undo it, or get skin at least. \n")
+    input("Press Enter to continue... \n")
+    print("Your thoughts are then interrupted by the skittering of small feet,")
+    print("a fiendish growl, and a club in a green hand. A goblin attacks! \n")
+    print("What do you do?")
+    print("1: Attack")
+    print("2: Defend")
 
     choice("Press the 'Enter' key after making your selection. \n", final_room, second_room_look)
 
