@@ -116,7 +116,21 @@ def first_room_look():
     Provides user with sword which is written to the user's inventory. The moves user
     automatically to second_room().
     '''
-    print("Ooh, they be LOOKIN'")
+    print("You decide to look around the room for anything you can use,")
+    print("you are uncertain what lies ahead of that door after all. \n")
+    input("Press Enter to continue... \n")
+    print("There are a number of piles of books and papers strewn about,")
+    print("some mostly empty shelves, a table, a chair, and a skull. \n")
+    input("Press Enter to continue... \n")
+    print("After rummaging through the books for a bit too long, you notice")
+    print("something sparkle from the corner of your eye socket - a sword. \n")
+    input("Press Enter to continue... \n")
+    print("You pick up the sword in your dominant hand and, feeling a bit more")
+    print("prepared, head to the next room. \n")
+    input("Press Enter to continue... \n")
+
+    
+    second_room()
 
 def second_room():
     '''
