@@ -93,10 +93,36 @@ def second_room_second_look():
     '''
 
 def secret_room():
-    '''
+    """
     Automatic function that informs the User of a secret room that was found. 
     A secret_room_item is added to the User's inventory and then immediately activates final_room().
-    '''
+    """
+    print("You walk through a dimly lit tunnel for what seems to be over an hour. \n")
+    input("Press Enter to continue... \n")
+    print("The only sounds are your own footsteps and the gentle crackling of each torch")
+    print("as you pass them by. \n")
+    input("Press Enter to continue... \n")
+    print("Finally you see a light in the distance, and quicken your step to reach what you")
+    print("hope is an exit. \n")
+    input("Press Enter to continue... \n")
+    print("To your immeasurable disappointment, it is in fact another dungeon room, simlar to")
+    print("the others, with two distinct differences that pique your curiosity: \n")
+    input("Press Enter to continue... \n")
+    print("The first is a chest in the centre of the room. The second is a purple portal behind it. \n")
+    input("Press Enter to continue... \n")
+    print("You walk to the chest and carefully lift the lid, ready for another ambush...")
+    print("But nothing happens. You peek inside and find a strange handheld device. \n")
+    input("Press Enter to continue... \n")
+    print("It is mostly metallic, with a wooden handle and a strange engraving you cannot deciper.")
+    print("There is a hole at the long end and some kind of trigger underneath that your index")
+    print("finger can gently rest in. It is comfortable to hold and not particularly heavy")
+    print("with the number 7 scratched into the side. \n")
+    input("Press Enter to continue... \n")
+    print("You deduce that this is a weapon and can be used a total of 7 times.")
+    print("New weapon in hand, you step through the portal, ready for what comes next... \n")
+    input("Press Enter to continue... \n")
+
+    final_room()
 
 def final_room():
     '''
@@ -105,5 +131,6 @@ def final_room():
     Should User have secret_room_item they will get the option to use it, immediately succeeding the fight.
     Upon succeeding, credits roll and main_menu() is loaded.
     '''
+    print("It's the final room now!")
 
 main_menu()
