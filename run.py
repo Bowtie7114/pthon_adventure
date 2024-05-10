@@ -71,7 +71,21 @@ def first_room():
     to second_room() whilst Look activates first_room_look(). User can use Move without
     the Look function.
     """
-    print("Lol can has cheeseburger")
+    print("....... \n")
+    print("You gain consciousness without warning and find yourself in a stone room. \n")
+    input("Press Enter to continue... \n")
+    print("The walls are polished grey brick, neatly arranged on all sides, the ceiling,")
+    print("and the floor with torches evenly spaced to illuminate the room comfortably. \n")
+    input("Press Enter to continue... \n")
+    print("As you look at your hands, you notice that they are white and knobbly,")
+    print("and you feel as if they are naked somehow. Your legs and chest are the same.")
+    print("You also cannot talk, or feel... or breathe... But you are alive. \n")
+    input("Press Enter to continue... \n")
+    print("You decide not to dwell on this and instead look for a way out.")
+    print("There is a door at the far end of the room, but there may also be")
+    print("something else here if you search for it. \n")
+    input("Press Enter to continue... \n")
+
 
 def first_room_look():
     '''
