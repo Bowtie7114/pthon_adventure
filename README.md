@@ -75,6 +75,8 @@ Adding a break after each option removed the infinite loop.
 - Code institute for providing the pre-installed code to run the code via browser-based terminal.
 - Fiancé [Magdalena]() for assistance with Python syntax (if "literal" in str(e): in main_menu())
 - File write function help from [Free Code Camp](https://www.freecodecamp.org/news/with-open-in-python-with-statement-syntax-example/).
+- [Geeks for Geeks](https://www.geeksforgeeks.org/passing-function-as-an-argument-in-python/) with refresher on function arguments.
+- [W3Schools](https://www.w3schools.com/python/default.asp) for various python reminders.
 
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
