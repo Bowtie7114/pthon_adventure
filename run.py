@@ -129,6 +129,7 @@ def first_room_look():
     print("prepared, head to the next room. \n")
     input("Press Enter to continue... \n")
 
+    inventory["sword"] = True
 
     second_room()
 
@@ -145,6 +146,8 @@ def second_room_look():
     Provides user with shield item, written into user's inventory. Provides Move and Look Again
     options. 
     '''
+
+    inventory["shield"] = True
 
 def second_room_second_look():
     '''
