@@ -261,6 +261,17 @@ def final_room():
     else:
         print("So... You've finally come...")
 
+
+def credits():
+    """
+    Function that tells the end of the story if the User is successful in final_room().
+    Recalls the main_menu() when done.
+    """
+
+    print("The end. Thank you for playing!")
+    input("Press Enter to return to the Main Menu. \n")
+    main_menu()
+
 inventory = {
     "sword": False,
     "shield": False,
