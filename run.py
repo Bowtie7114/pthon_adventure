@@ -137,6 +137,8 @@ def first_room_look():
     input("Press Enter to continue... \n")
 
     inventory["sword"] = True
+    print("Sword obtained!")
+    input("Press Enter to continue... \n")
 
     second_room()
 
@@ -167,9 +169,24 @@ def second_room_look():
     options. 
     '''
 
-    print("Congrats, mf-er got a shield")
+    print("You feel off about looking through this goblin's room, especially")
+    print("with the corpse still there, but you may need something else to")
+    print("help you with the remainder of your journey. \n")
+    input("Press Enter to continue... \n")
+    print("After some respectful rummaging, you find a metal kite shield embellished")
+    print("with a symbol of a cockatiel for some reason. You decide to take it. \n")
+    input("Press Enter to continue... \n")
 
     inventory["shield"] = True
+    print("Shield obtained! \n")
+    input("Press Enter to continue... \n")
+
+    print("Shield in your off-hand, you feel ready to continue... Except for an uneasiness")
+    print("as if there is something else here...")
+    print("What will you do?")
+    input("Press Enter to continue... \n")
+    print("1. Move to the Final Room")
+    print("2. Look around again")
 
     choice("Press the 'Enter' key after making your selection. \n", final_room, second_room_second_look)
 
