@@ -182,6 +182,8 @@ def secret_room():
     print("New weapon in hand, you step through the portal, ready for what comes next... \n")
     input("Press Enter to continue... \n")
 
+    inventory["secret_item"] = True
+
     final_room()
 
 def final_room():
@@ -191,7 +193,10 @@ def final_room():
     Should User have secret_room_item they will get the option to use it, immediately succeeding the fight.
     Upon succeeding, credits roll and main_menu() is loaded.
     '''
-    print("It's the final room now!")
+    if inventory["secret_item"] == True:
+        print("Oh shit, he's got a gun!")
+    else:
+        print("So... You've finally come...")
 
 inventory = {
     "sword": False,
