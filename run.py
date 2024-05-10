@@ -178,7 +178,13 @@ def second_room_second_look():
     Provides context to User that they find nothing but that there might be something more. Provides
     Move and Look Once More option. Look Once More option moves on to secret_room().
     '''
-    print("You looked again? Hella nice")
+    print("This time around you searched the walls themselves. You noticed that")
+    print("some of the bricks were slightly off colour compared to the rest.")
+    input("Press Enter to continue... \n")
+    print("After touching and prodding and pushing, you move the wall itself to the side")
+    print("revealing a hidden passage. Perhaps it leads outside, or to whatever did this")
+    print("to you! Only one way to find out...")
+    input("Press Enter to continue... \n")
 
     secret_room()
 
