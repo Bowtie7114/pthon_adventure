@@ -2,12 +2,10 @@
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
-import os
-
 def main_menu():
     """
     Main menu function when the program loads. Allows the user to select New Game,
-    Continue and load the previous save file, or the help menu for information
+    Continue and load the previous save state or the help menu for information
     on how to play the game.
     """
     print("Welcome to P-thon, a short Python console-based adventure game.")
@@ -39,9 +37,8 @@ def main_menu():
 
 def continue_game():
     """
-    Functions looks through downloads folder of User PC for save file. If once does not
-    exist, flags error and re-directs to main_menu(). If it does, read room function saved
-    and appropriate function.
+    Function prompts User to enter a code. If user enters code correctly, function loads
+    the correct room and inventory in the inventory dictionary that the User had at that time.
     """
     print("Continue Game")
 
@@ -55,13 +52,12 @@ def how_to_play():
     print("You will need to type numbers when prompted to make decisions ")
     print("and some progress will be locked if you do not try everything. \n")
     input("Press Enter to continue... \n")
-    print("When you select a New Game for the first time, you will be prompted to")
-    print("download a save file that will also double as your inventory storage. \n")
+    print("When you enter a room, you will be given a code. Write this code down!")
+    print("It is a save state that monitors the room you just entered and your current")
+    print("inventory.")
     input("Press Enter to continue... \n")
-    print("Please save this file to your Downloads folder, not inside another folder.")
-    print("Your progress will auto-save each room, so you can stop and come back,")
-    print("but do not delete the pthon_save.txt in your Downloads folder or you")
-    print("will need to start from the beginning. \n")
+    print("If you forget your code, or do not write it down,")
+    print("you will need to start from the beginning. \n")
     input("Press Enter to continue... \n")
     print("Have fun! When you are ready, press 'Enter' to go back to the Main Menu.")
     input("Press Enter to continue... \n")
@@ -74,12 +70,8 @@ def first_room():
     the Look function.
     """
 
-    print("Creating save file... \n")
-
-    path = os.path.join(os.environ["USERPROFILE"], "Downloads")
-
-    with open(os.path.join(path, "pthon_save.txt"), "x") as save_file:
-        save_file.write("first_room")
+    print("Creating save code... \n")
+    print(f"Your code is: ")
 
     print("....... \n")
     print("You gain consciousness without warning and find yourself in a stone room. \n")
