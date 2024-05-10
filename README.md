@@ -58,6 +58,10 @@ Final Room:<br>
     Used as the hosting platform, allowing Users to activate the program in their web browser.
 
 ## Testing
+### Bugs
+
+- When selecting a path on the main_menu() function, the test print ran as expected and then the User was prompted to enter an input value again, initiating an infinite loop.
+Adding a break after each option removed the infinite loop.
 
 ## Deployment
 
