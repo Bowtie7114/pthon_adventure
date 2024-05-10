@@ -71,6 +71,12 @@ def first_room():
     to second_room() whilst Look activates first_room_look(). User can use Move without
     the Look function.
     """
+
+    print("Creating save file... \n")
+
+    with open("pthon_save.txt", "x") as save_file:
+        save_file.write("first_room")
+
     print("....... \n")
     print("You gain consciousness without warning and find yourself in a stone room. \n")
     input("Press Enter to continue... \n")
