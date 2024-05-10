@@ -63,6 +63,31 @@ def how_to_play():
     input("Press Enter to continue... \n")
     main_menu()
 
+
+def choice(text, func1, func2):
+    """
+    Repeating function to allow User to make a choice of either 1 or 2.
+    """
+    while True:
+        try:
+            choice = int(input(text))
+            
+            if choice == 1:
+                func1()
+                break
+            elif choice == 2:
+                func2()
+                break            
+            else:
+                raise ValueError (
+                    f"{choice} is not a valid option. Please try again. \n"
+                )
+        except ValueError as e:
+            if "literal" in str(e):
+                print(f"Invalid data: {e}, please use a number (1-2).\n")
+            else:
+                print(e)
+
 def first_room():
     """
     First room function, introduces user to Move and Look options. Move progresses
@@ -90,25 +115,7 @@ def first_room():
     print("1: Move through the door.")
     print("2: Look around the room.")
 
-    while True:
-        try:
-            choice = int(input("Press the 'Enter' key after making your selection. \n"))
-            
-            if choice == 1:
-                second_room()
-                break
-            elif choice == 2:
-                first_room_look()
-                break            
-            else:
-                raise ValueError (
-                    f"{choice} is not a valid option. Please try again. \n"
-                )
-        except ValueError as e:
-            if "literal" in str(e):
-                print(f"Invalid data: {e}, please use a number (1-2).\n")
-            else:
-                print(e)
+    choice("Press the 'Enter' key after making your selection. \n", second_room, first_room_look)
 
 
 def first_room_look():
