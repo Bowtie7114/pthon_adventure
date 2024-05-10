@@ -148,11 +148,15 @@ def second_room():
     '''
     print("Movin' on? Potentially a mistake")
 
+    choice("Press the 'Enter' key after making your selection. \n", final_room, second_room_look)
+
 def second_room_look():
     '''
     Provides user with shield item, written into user's inventory. Provides Move and Look Again
     options. 
     '''
+
+    print("Congrats, mf-er got a shield")
 
     inventory["shield"] = True
 
