@@ -160,11 +160,16 @@ def second_room_look():
 
     inventory["shield"] = True
 
+    choice("Press the 'Enter' key after making your selection. \n", final_room, second_room_second_look)
+
 def second_room_second_look():
     '''
     Provides context to User that they find nothing but that there might be something more. Provides
     Move and Look Once More option. Look Once More option moves on to secret_room().
     '''
+    print("You looked again? Hella nice")
+
+    secret_room()
 
 def secret_room():
     """
