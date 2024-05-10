@@ -66,7 +66,7 @@ Adding a break after each option removed the infinite loop.
 ## Deployment
 
 ## Credits
-
+- Fiancé [Magdalena]() for assistance with Python syntax (if "literal" in str(e): in main_menu())
 
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
