@@ -129,7 +129,7 @@ def first_room_look():
     print("prepared, head to the next room. \n")
     input("Press Enter to continue... \n")
 
-    
+
     second_room()
 
 def second_room():
@@ -192,5 +192,11 @@ def final_room():
     Upon succeeding, credits roll and main_menu() is loaded.
     '''
     print("It's the final room now!")
+
+inventory = {
+    "sword": False,
+    "shield": False,
+    "secret_item": False
+}
 
 main_menu()
