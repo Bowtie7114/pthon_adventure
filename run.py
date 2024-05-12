@@ -86,7 +86,7 @@ def choice(text, func1, func2):
                 func2()
                 break            
             else:
-                raise ValueError (
+                raise ValueError ( 
                     f"{choice} is not a valid option. Please try again. \n"
                 )
         except ValueError as e:
@@ -102,7 +102,7 @@ def first_room():
     the Look function.
     """
 
-    print("Creating save code... \n")
+    print(colours.YELLOW + "Creating save code... \n" + colours.ENDC)
     print(f"Your code is: ")
 
     print("....... \n")
@@ -179,7 +179,7 @@ def second_room():
                 print("The goblin snickers and swings its club into your head.")
                 print("You fall apart and slowly drift out of conciousness... \n")
                 input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
-                print("GAME OVER. \n")
+                print(colours.RED + "GAME OVER. \n" + colours.ENDC)
                 print("Maybe you can find something to defend yourself with? \n")
                 input(colours.GREEN + "Press Enter to return to the Main Menu... \n" + colours.ENDC)
                 main_menu()
@@ -193,7 +193,7 @@ def second_room():
                 print("as the goblin pushes your body over and begins gnawing on your thigh.")
                 input(colours.GREEN + "Press Enter to continue..." + colours.ENDC)
                 print("Your mind fades. At least the goblin will not go hungry for a while... \n")
-                print("GAME OVER. \n")
+                print(colours.RED + "GAME OVER. \n" + colours.ENDC)
                 print("Offense may be the best defence against this opponent. \n")
                 input(colours.GREEN + "Press Enter to return to the Main Menu..." + colours.ENDC)
                 main_menu()
