@@ -2,6 +2,12 @@
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
+class colours:
+    RED = '\033[31m'
+    GREEN = '\033[32m'
+    ENDC = '\033[m'
+    BLUE = '\033[34m'
+
 def main_menu():
     """
     Main menu function when the program loads. Allows the user to select New Game,
@@ -14,7 +20,7 @@ def main_menu():
 
     while True:
         try:
-            choice = int(input("Press the 'Enter' key after making your selection. \n"))
+            choice = int(input(colours.GREEN + "Press the 'Enter' key after making your selection.  \n" + colours.ENDC))
             
             if choice == 1:
                 first_room()
