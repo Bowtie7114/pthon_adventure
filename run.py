@@ -7,6 +7,7 @@ class colours:
     GREEN = '\033[32m'
     ENDC = '\033[m'
     BLUE = '\033[34m'
+    YELLOW = '\033[33m'
 
 def main_menu():
     """
