@@ -68,7 +68,10 @@ at that time which, when given at the continue_game function, loads the appropri
 
 - When selecting a path on the main_menu() function, the test print ran as expected and then the User was prompted to enter an input value again, initiating an infinite loop.
 Adding a break after each option removed the infinite loop.
-
+- When testing the first fight scene, received error code: function choice at 0x7f20da532020. I had forgotten to change the fight_choice input to an int(). Changing this allowed the code to function, but then 
+revealed another bug;
+- Within the if statement for fight_choice in second_room(), the first if fight_choice == 1 statement ended there. As such, whether or not the sword was present in the inventory, it would always run the first option.
+Changed the code to if fight_choice == 1 and inventory[sword] == False to rectify.
 
 ## Deployment
 
