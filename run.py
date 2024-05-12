@@ -9,6 +9,16 @@ class colours:
     BLUE = '\033[34m'
     YELLOW = '\033[33m'
 
+def save_codes(room):
+    """
+    Function that generates a save code based on which room the User is in
+    and the state of the inventory by assigning a code to each room, reading said
+    code as the beginning of each room function load and combining it with the state
+    of the dictionary at that time. Then displays combined code to the user.
+    """
+
+    
+
 def main_menu():
     """
     Main menu function when the program loads. Allows the user to select New Game,
