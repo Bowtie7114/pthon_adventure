@@ -293,7 +293,8 @@ def secret_room():
     print("with the number 7 scratched into the side. \n")
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
     print("You deduce that this is a weapon and can be used a total of 7 times.")
-    print("New weapon in hand, you step through the portal, ready for what comes next... \n")
+    print("New weapon tucked in a conveniently shaped slot in the back of your shield,")
+    print("you step through the portal, ready for what comes next... \n")")
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
 
     inventory["secret_item"] = True
@@ -335,9 +336,9 @@ def final_room():
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
     print('"Oh, so thats how you want to play? Fine."')
     print("The air pressure, the mood, your calm - it all changes in an instant.")
-    print("The Old Man is preparing to fight you with everything he has.")
-    print("What will you do?")
+    print("The Old Man is preparing to fight you with everything he has. \n")
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+    print("What will you do? \n")
     print("1: Fight")
     print("2: Surrender")
 
