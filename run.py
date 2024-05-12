@@ -137,7 +137,7 @@ def first_room_look():
     input("Press Enter to continue... \n")
 
     inventory["sword"] = True
-    print("Sword obtained!")
+    print("Sword obtained! \n")
     input("Press Enter to continue... \n")
 
     second_room()
@@ -159,8 +159,62 @@ def second_room():
     print("a fiendish growl, and a club in a green hand. A goblin attacks! \n")
     print("What do you do?")
     print("1: Attack")
-    print("2: Defend")
+    print("2: Defend \n")
 
+    while True:
+        try:
+            fight_choice = int(input("What do you do? \n"))
+            if fight_choice == 1 and inventory["sword"] == False:
+                print("You instinctively strike first at the goblin with your bare fist.")
+                print("However, being made of bone and with no muscles or tendons,")
+                print("your hand and wrist fall apart on impact. \n")
+                input("Press Enter to continue... \n")
+                print("The goblin snickers and swings its club into your head.")
+                print("You fall apart and slowly drift out of conciousness... \n")
+                input("Press Enter to continue... \n")
+                print("GAME OVER. \n")
+                print("Maybe you can find something to defend yourself with? \n")
+                input("Press Enter to return to the Main Menu... \n")
+                main_menu()
+                break
+            elif fight_choice == 2:
+                print("You instinctively bring your arms to your face in an attempt to")
+                print("protect yourself. However...")
+                input("Press Enter to continue...")
+                print("The goblin strikes your arms with his club, shattering them and")
+                print("connecting with your skull. As your head hits the floor, you watch")
+                print("as the goblin pushes your body over and begins gnawing on your thigh.")
+                input("Press Enter to continue...")
+                print("Your mind fades. At least the goblin will not go hungry for a while... \n")
+                print("GAME OVER. \n")
+                print("Offense may be the best defence against this opponent. \n")
+                input("Press Enter to return to the Main Menu...")
+                main_menu()
+                break
+            elif fight_choice == 1 and inventory["sword"] == True:
+                print("You instinctively thrust your sword at the goblin who, taken by surprise,")
+                print("does not react until your blade pierces clean through its chest. \n")
+                input("Press Enter to continue... \n")
+                print("The goblin looks at you mouth agape and begins to move its arm towards you.")
+                print("You pull the sword out from its chest and watch as it hits the floor.")
+                print("The goblin is motionless, green blood beginning to pool underneath it.")
+                print("You almost feel sorry for it... \n")
+                input("Press Enter to continue... \n")
+                break    
+            else:
+                raise ValueError (
+                    f"{choice} is not a valid option. Please try again. \n"
+                )
+        except ValueError as e:
+            if "literal" in str(e):
+                print(f"Invalid data: {e}, please use a number (1-2).\n")
+            else:
+                print(e)
+
+    print("With the encounter over, you calm the shaking in your arms and prepare your")
+    print("next course of action. \n")
+    input("Press Enter to continue \n")
+    print("As before you see a doorway infront of you")
     choice("Press the 'Enter' key after making your selection. \n", final_room, second_room_look)
 
 def second_room_look():
@@ -192,8 +246,8 @@ def second_room_look():
 
 def second_room_second_look():
     '''
-    Provides context to User that they find nothing but that there might be something more. Provides
-    Move and Look Once More option. Look Once More option moves on to secret_room().
+    Provides context to User that they find something in the wall.
+    Moves on to secret_room().
     '''
     print("This time around you searched the walls themselves. You noticed that")
     print("some of the bricks were slightly off colour compared to the rest.")

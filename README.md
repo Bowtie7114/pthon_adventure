@@ -69,6 +69,7 @@ at that time which, when given at the continue_game function, loads the appropri
 - When selecting a path on the main_menu() function, the test print ran as expected and then the User was prompted to enter an input value again, initiating an infinite loop.
 Adding a break after each option removed the infinite loop.
 
+
 ## Deployment
 
 ## Credits
