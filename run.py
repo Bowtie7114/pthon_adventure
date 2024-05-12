@@ -71,7 +71,20 @@ def continue_game():
     Function prompts User to enter a code. If user enters code correctly, function loads
     the correct room and inventory in the inventory dictionary that the User had at that time.
     """
-    print("Continue Game")
+    code = input(colours.GREEN + "Please enter your code and press Enter..." + colours.ENDC)
+
+    if code[4] == "1":
+        inventory["sword"] = True
+    if code[7] == "1":
+        inventory["shield"] = True
+    if code[10] == "1":
+        inventory["secret_item"] = True
+    if code[0:3] == "001":
+        first_room()
+    if code[0:3] == "002":
+        second_room()
+    if code[0:3] == "003":
+        final_room()
 
 def how_to_play():
     """
