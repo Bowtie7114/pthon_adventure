@@ -304,7 +304,8 @@ def secret_room():
 
 def final_room():
     '''
-    Function that initiates an automatic fight after lore pre-amble. 
+    Function that gives the User the choice of a fight after lore pre-amble. 
+    If User decides to Surrender, lore rolls and the game ends.
     Should User have sword and shield, they will need to Defend first, then Attack to succeed.
     Should User have secret_room_item they will get the option to use it, immediately succeeding the fight.
     Upon succeeding, credits roll and main_menu() is loaded.
@@ -342,11 +343,15 @@ def final_room():
     print("1: Fight")
     print("2: Surrender")
 
-    if inventory["secret_item"] == True:
-        print("Oh shit, he's got a gun!")
-    else:
-        print("So... You've finally come...")
+    choice("", 1, 2)
 
+
+def final_fight():
+    """
+    Function that, if the User does not have the secret_item, plays the fight scene
+    as normal with the sword and shield. If they do have the secret_item, it gives them the choice
+    as to whether they use that or the sword and shield.
+    """
 
 def credits():
     """
