@@ -22,7 +22,7 @@ def save_codes(room):
         save_code += "s1"
     else:
         save_code += "s0"
-    if inventory["shiled"]:
+    if inventory["shield"]:
         save_code += "sh1"
     else:
         save_code += "sh0"
@@ -126,8 +126,7 @@ def first_room():
     the Look function.
     """
 
-    print(colours.YELLOW + "Creating save code... \n" + colours.ENDC)
-    print(f"Your code is: ")
+    save_codes("001")
 
     print("....... \n")
     print("You gain consciousness without warning and find yourself in a stone room. \n")
@@ -179,6 +178,9 @@ def second_room():
     sequence with options to Fight or Defend when Move option selected. If user defends, they fail. 
     If they attack without a sword, they fail. If they attack with a sword, they succeed.
     '''
+
+    save_codes("002")
+
     print("As you walk through the corridor to the next room, you have a thought:")
     print("You are a skeleton. \n")
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
@@ -339,6 +341,8 @@ def final_room():
     Should User have secret_room_item they will get the option to use it, immediately succeeding the fight.
     Upon succeeding, credits roll and main_menu() is loaded.
     '''
+
+    save_codes("003")
 
     print("You finally reach the final room on of this admittedly small dungeon. \n")
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
