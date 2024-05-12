@@ -17,7 +17,21 @@ def save_codes(room):
     of the dictionary at that time. Then displays combined code to the user.
     """
 
-    
+    save_code = room
+    if inventory["sword"]:
+        save_code += "s1"
+    else:
+        save_code += "s0"
+    if inventory["shiled"]:
+        save_code += "sh1"
+    else:
+        save_code += "sh0"
+    if inventory["secret_item"]:
+        save_code += "si1"
+    else:
+        save_code += "si0"
+    print(colours.YELLOW + f"Your save code is: {save_code} \n" + colours.ENDC)
+    return save_code
 
 def main_menu():
     """
