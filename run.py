@@ -1,6 +1,7 @@
 # Your code goes here.
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
+import re
 
 class colours:
     RED = '\033[31m'
@@ -85,6 +86,8 @@ def continue_game():
         second_room()
     if code[0:3] == "003":
         final_room()
+
+    ^00[0-3]s[0,1]sh[0,1]si[0,1]$
 
 def how_to_play():
     """

@@ -84,6 +84,7 @@ Changed the code to if fight_choice == 1 and inventory[sword] == False to rectif
 - [W3Schools](https://www.w3schools.com/python/default.asp) for various python reminders.
 - [W3Schools](https://www.w3schools.com/python/python_regex.asp) for information on how to check string using RegEx.
 - User Kevin Chou on [Stack Overflow](https://stackoverflow.com/questions/37340049/how-do-i-print-colored-output-to-the-terminal-in-python) for the information on setting colour console text.
+- [Regex101](https://regex101.com/) as a RegEx syntax checking site to ensure what I used worked correctly.
 
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
