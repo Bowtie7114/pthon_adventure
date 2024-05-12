@@ -353,6 +353,11 @@ def final_fight():
     as to whether they use that or the sword and shield.
     """
 
+def surrender():
+    """
+    User surrenders fight, is given some story content, and then the main_menu loads.
+    """
+
 def credits():
     """
     Function that tells the end of the story if the User is successful in final_room().
