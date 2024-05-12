@@ -32,7 +32,6 @@ def save_codes(room):
     else:
         save_code += "si0"
     print(colours.YELLOW + f"Your save code is: {save_code} \n" + colours.ENDC)
-    return save_code
 
 def main_menu():
     """
@@ -74,6 +73,11 @@ def continue_game():
     """
     code = input(colours.GREEN + "Please enter your code and press Enter..." + colours.ENDC)
 
+    check_code = re.compile("^00[0-3]s[0,1]sh[0,1]si[0,1]$")
+    if not check_code.match(code):
+        print("This code is not valid. Please enter a valid code. \n")
+        continue_game()
+
     if code[4] == "1":
         inventory["sword"] = True
     if code[7] == "1":
@@ -87,7 +91,6 @@ def continue_game():
     if code[0:3] == "003":
         final_room()
 
-    ^00[0-3]s[0,1]sh[0,1]si[0,1]$
 
 def how_to_play():
     """
