@@ -200,6 +200,7 @@ def second_room():
 
     save_codes("002")
 
+    print("....... \n")
     print("As you walk through the corridor to the next room, you have a thought:")
     print("You are a skeleton. \n")
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
@@ -363,6 +364,7 @@ def final_room():
 
     save_codes("003")
 
+    print("....... \n")
     print("You finally reach the final room on of this admittedly small dungeon. \n")
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
     print("The walls are an obsidian black, bright red sconces peppering the walls,")
@@ -410,7 +412,23 @@ def surrender():
     """
     User surrenders fight, is given some story content, and then the main_menu loads.
     """
-    print("Coward")
+    print("As the air around you swirls and rage, light appearing from random corners")
+    print("of the dim room, you are unable to act, to move, to even think. \n")
+    input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+    print("In a moment of terror filled clarity you drop everything and fall")
+    print("to your knees with a clatter, throwing up your arms. You surrender.")
+    print("The old wizard realises that you have lost the will to fight and speaks: \n")
+    input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+    print('"Well, you had me worried there, Skelly-Boy! Be a shame to kill you again."')
+    print("Again? So he killed you before? Was he the reason for EVERYTHING?")
+    print('"Stay still now, dont want to mess this up again. Mind control is tricky!" \n')
+    input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+    print("He chuckles and begins casting a spell on you. Your mind starts to go blank.")
+    print("The last thing you remember before it all goes black is the old man:")
+    print('"I hope you can cook well, I happen to be a picky eater!" \n')
+    print(colours.RED + "GAME OVER \n" + colours.ENDC)
+    input(colours.GREEN + "Press Enter to return to the Main Menu... \n" + colours.ENDC)
+    main_menu()
 
 def credits():
     """
