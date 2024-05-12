@@ -143,7 +143,7 @@ def first_room_look():
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
 
     inventory["sword"] = True
-    print("Sword obtained! \n")
+    print(colours.BLUE + "Sword obtained! \n" + colours.ENDC)
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
 
     second_room()
@@ -238,7 +238,7 @@ def second_room_look():
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
 
     inventory["shield"] = True
-    print("Shield obtained! \n")
+    print(colours.BLUE + "Shield obtained! \n" + colours.ENDC)
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
 
     print("Shield in your off-hand, you feel ready to continue... Except for an uneasiness")
@@ -296,6 +296,7 @@ def secret_room():
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
 
     inventory["secret_item"] = True
+    print(colour.BLUE + "Secret Weapon obtained! \n" + colours.ENDC)
 
     final_room()
 
