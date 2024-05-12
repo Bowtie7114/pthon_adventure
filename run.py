@@ -220,8 +220,12 @@ def second_room():
 
     print("With the encounter over, you calm the shaking in your arms and prepare your")
     print("next course of action. \n")
-    input(colours.GREEN + "Press Enter to continue \n" + colours.ENDC)
-    print("As before you see a doorway infront of you")
+    input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+    print("As before you see a doorway infront of you, but it may be prudent to search")
+    print("your surroundings before carrying on. What will you do? \n")
+    input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+    print("1: Move on")
+    print("2: Look around \n")
     choice(colours.GREEN + "Press the 'Enter' key after making your selection. \n" + colours.ENDC, final_room, second_room_look)
 
 def second_room_look():
@@ -294,11 +298,12 @@ def secret_room():
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
     print("You deduce that this is a weapon and can be used a total of 7 times.")
     print("New weapon tucked in a conveniently shaped slot in the back of your shield,")
-    print("you step through the portal, ready for what comes next... \n")")
+    print("you step through the portal, ready for what comes next... \n")
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
 
     inventory["secret_item"] = True
-    print(colour.BLUE + "Secret Weapon obtained! \n" + colours.ENDC)
+    print(colours.BLUE + "Secret Weapon obtained! \n" + colours.ENDC)
+    input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
 
     final_room()
 
@@ -333,7 +338,7 @@ def final_room():
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
     print("The only thought racing through your mind is that he did this to you.")
     print("If he brought you back, then taking him out will end your suffering.")
-    print("You ready your stance, and the Old Necromancer notices the shift.")
+    print("You ready your stance, and the Old Necromancer notices the shift. \n")
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
     print('"Oh, so thats how you want to play? Fine."')
     print("The air pressure, the mood, your calm - it all changes in an instant.")
@@ -341,9 +346,9 @@ def final_room():
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
     print("What will you do? \n")
     print("1: Fight")
-    print("2: Surrender")
+    print("2: Surrender \n")
 
-    choice("", 1, 2)
+    choice(colours.GREEN + "Press the 'Enter' key after making your selection. \n" + colours.ENDC, final_fight, surrender)
 
 
 def final_fight():
@@ -352,11 +357,13 @@ def final_fight():
     as normal with the sword and shield. If they do have the secret_item, it gives them the choice
     as to whether they use that or the sword and shield.
     """
+    print("Brave Skelly-boy")
 
 def surrender():
     """
     User surrenders fight, is given some story content, and then the main_menu loads.
     """
+    print("Coward")
 
 def credits():
     """
