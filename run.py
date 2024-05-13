@@ -71,9 +71,11 @@ def continue_game():
     Function prompts User to enter a code. If user enters code correctly, function loads
     the correct room and inventory in the inventory dictionary that the User had at that time.
     """
-    code = input(colours.GREEN + "Please enter your code and press Enter..." + colours.ENDC)
+    code = input(colours.GREEN + "Please enter your code and press Enter... \nTo return to Main Menu, type exit and press Enter... \n" + colours.ENDC)
 
     check_code = re.compile("^00[0-3]s[0,1]sh[0,1]si[0,1]$")
+    if code == "exit":
+        main_menu()
     if not check_code.match(code):
         print("This code is not valid. Please enter a valid code. \n")
         continue_game()
