@@ -42,6 +42,7 @@ for the complete experience.
 autosave messages.
 - Multiple endings based on the User's decisions.
 - Prevention of the User entering invalid commands, e.g. when making choices.
+- A main menu that allows to start a new game, continue from the save file, or access a how to play menu.
 
 ## Structure
 ### Features
