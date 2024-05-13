@@ -1,5 +1,6 @@
 import re
 
+
 class colours:
     RED = '\033[31m'
     GREEN = '\033[32m'
@@ -7,12 +8,14 @@ class colours:
     BLUE = '\033[34m'
     YELLOW = '\033[33m'
 
+
 def save_codes(room):
     """
     Function that generates a save code based on which room the User is in
-    and the state of the inventory by assigning a code to each room, reading said
-    code as the beginning of each room function load and combining it with the state
-    of the dictionary at that time. Then displays combined code to the user.
+    and the state of the inventory by assigning a code to each room reading
+    said code as the beginning of each room function load and combining it
+    with the state of the dictionary at that time.
+    Then displays combined code to the user.
     """
 
     save_code = room
@@ -30,20 +33,22 @@ def save_codes(room):
         save_code += "si0"
     print(colours.YELLOW + f"Your save code is: {save_code} \n" + colours.ENDC)
 
+
 def main_menu():
     """
-    Main menu function when the program loads. Allows the user to select New Game,
-    Continue and load the previous save state or the help menu for information
+    Main menu function when the program loads. Allows user to select New Game,
+    Continue the previous save state or the help menu for information
     on how to play the game.
     """
     print("Welcome to P-thon, a short Python console-based adventure game.")
-    print("Please enter 1 for New Game, 2 to Continue, or 3 for the How to Play.")
+    print("Please enter 1: for New Game")
+    print("2: for Continue")
+    print("3: for How to Play. \n")
     print("If this is your first time, please check the How to Play first. \n")
 
     while True:
         try:
-            choice = int(input(colours.GREEN + "Press the 'Enter' key after making your selection.  \n" + colours.ENDC))
-            
+            choice = int(input(colours.GREEN + "Press the 'Enter' after making your selection.  \n" + colours.ENDC))
             if choice == 1:
                 first_room()
                 break
@@ -54,7 +59,7 @@ def main_menu():
                 how_to_play()
                 break
             else:
-                raise ValueError (
+                raise ValueError(
                     f"{choice} is not a valid option. Please try again. \n"
                 )
         except ValueError as e:
@@ -63,10 +68,13 @@ def main_menu():
             else:
                 print(e)
 
+
 def continue_game():
     """
-    Function prompts User to enter a code. If user enters code correctly, function loads
-    the correct room and inventory in the inventory dictionary that the User had at that time.
+    Function prompts User to enter a code.
+    If user enters code correctly, function loads
+    the correct room and inventory in the inventory
+    dictionary that the User had at that time.
     """
     code = input(colours.GREEN + "Please enter your code and press Enter... \nTo return to Main Menu, type exit and press Enter... \n" + colours.ENDC)
 
@@ -93,7 +101,8 @@ def continue_game():
 
 def how_to_play():
     """
-    Set of instruction paragraphs on how to play P-thon. User must select Enter key to 
+    Set of instruction paragraphs on how to play P-thon.
+    User must select Enter key to
     end function and move back to main_menu().
     """
     print("P-thon is a text-based mini-adventure played entirely in the console. \n")
@@ -122,15 +131,14 @@ def choice(text, func1, func2):
     while True:
         try:
             choice = int(input(text))
-            
             if choice == 1:
                 func1()
                 break
             elif choice == 2:
                 func2()
-                break            
+                break
             else:
-                raise ValueError ( 
+                raise ValueError(
                     f"{choice} is not a valid option. Please try again. \n"
                 )
         except ValueError as e:
@@ -139,10 +147,12 @@ def choice(text, func1, func2):
             else:
                 print(e)
 
+
 def first_room():
     """
-    First room function, introduces user to Move and Look options. Move progresses
-    to second_room() whilst Look activates first_room_look(). User can use Move without
+    First room function, introduces user to Move and Look options.
+    Move progresses to second_room() whilst Look activates
+    first_room_look(). User can use Move without
     the Look function.
     """
 
@@ -170,7 +180,8 @@ def first_room():
 
 def first_room_look():
     '''
-    Provides user with sword which is written to the user's inventory. The moves user
+    Provides user with sword which is written to the
+    user's inventory. The moves user
     automatically to second_room().
     '''
     print("You decide to look around the room for anything you can use,")
@@ -192,11 +203,14 @@ def first_room_look():
 
     second_room()
 
+
 def second_room():
     '''
-    Similar to first_room(), providing Move and Look options. Initiates first combat
-    sequence with options to Fight or Defend when Move option selected. If user defends, they fail. 
-    If they attack without a sword, they fail. If they attack with a sword, they succeed.
+    Similar to first_room(), providing Move and Look options.
+    Initiates first combat sequence with options to Fight or Defend
+    when Move option selected. If user defends, they fail.
+    If they attack without a sword, they fail.
+    If they attack with a sword, they succeed.
     '''
 
     save_codes("002")
@@ -218,7 +232,7 @@ def second_room():
     while True:
         try:
             fight_choice = int(input(colours.GREEN + "What do you do? \n" + colours.ENDC))
-            if fight_choice == 1 and inventory["sword"] == False:
+            if fight_choice == 1 and inventory["sword"] is False:
                 print("You instinctively strike first at the goblin with your bare fist.")
                 print("However, being made of bone and with no muscles or tendons,")
                 print("your hand and wrist fall apart on impact. \n")
@@ -245,7 +259,7 @@ def second_room():
                 input(colours.GREEN + "Press Enter to return to the Main Menu..." + colours.ENDC)
                 main_menu()
                 break
-            elif fight_choice == 1 and inventory["sword"] == True:
+            elif fight_choice == 1 and inventory["sword"] is True:
                 print("You instinctively thrust your sword at the goblin who, taken by surprise,")
                 print("does not react until your blade pierces clean through its chest. \n")
                 input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
@@ -254,9 +268,9 @@ def second_room():
                 print("The goblin is motionless, green blood beginning to pool underneath it.")
                 print("You almost feel sorry for it... \n")
                 input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
-                break    
+                break
             else:
-                raise ValueError (
+                raise ValueError(
                     f"{choice} is not a valid option. Please try again. \n"
                 )
         except ValueError as e:
@@ -275,10 +289,11 @@ def second_room():
     print("2: Look around \n")
     choice(colours.GREEN + "Press the 'Enter' key after making your selection. \n" + colours.ENDC, final_room, second_room_look)
 
+
 def second_room_look():
     '''
-    Provides user with shield item, written into user's inventory. Provides Move and Look Again
-    options. 
+    Provides user with shield item.
+    Provides Move and Look Again options.
     '''
 
     print("You feel off looking through this goblin's room, especially")
@@ -302,6 +317,7 @@ def second_room_look():
 
     choice(colours.GREEN + "Press the 'Enter' key after making your selection. \n" + colours.ENDC, final_room, second_room_second_look)
 
+
 def second_room_second_look():
     '''
     Provides context to User that they find something in the wall.
@@ -317,10 +333,12 @@ def second_room_second_look():
 
     secret_room()
 
+
 def secret_room():
     """
-    Automatic function that informs the User of a secret room that was found. 
-    A secret_room_item is added to the User's inventory and then immediately activates final_room().
+    Automatic function that informs the User of a secret room that was found.
+    A secret_room_item is added to the User's inventory and then
+    immediately activates final_room().
     """
     print("You walk through a dimly lit tunnel for what seems to be over an hour. \n")
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
@@ -354,12 +372,14 @@ def secret_room():
 
     final_room()
 
+
 def final_room():
     '''
-    Function that gives the User the choice of a fight after lore pre-amble. 
+    Function that gives the User the choice of a fight after lore pre-amble.
     If User decides to Surrender, lore rolls and the game ends.
-    Should User have sword and shield, they will need to Defend first, then Attack to succeed.
-    Should User have secret_room_item they will get the option to use it, immediately succeeding the fight.
+    Should User have sword and shield, they will need to Defend first,
+    then Attack to succeed. Should User have secret_room_item they will
+    get the option to use it, immediately succeeding the fight.
     Upon succeeding, credits roll and main_menu() is loaded.
     '''
 
@@ -404,9 +424,9 @@ def final_room():
 
 def final_fight():
     """
-    Function that, if the User does not have the secret_item, plays the fight scene
-    as normal with the sword and shield. If they do have the secret_item, it gives them the choice
-    as to whether they use that or the sword and shield.
+    If the User does not have the secret_item, plays the fight scene
+    as normal with the sword and shield. If they do have the secret_item
+    it gives them the choice to use that or the sword and shield.
     """
     print("Despite your shaking bones and an overwhelming sense of dread,")
     print("you stand firm, weapons at the ready - do or die... Again! \n")
@@ -414,7 +434,7 @@ def final_fight():
     print('"I hope you are ready, Skelly-boy! Here comes some magic!" \n')
 
     while True:
-        if inventory["secret_item"] == True:
+        if inventory["secret_item"] is True:
             try:
                 print("Choose how to fight: \n")
                 print("1: Sword and Shield")
@@ -438,9 +458,9 @@ def final_fight():
                     credits()
                     break
                 else:
-                    raise ValueError ( 
-                    f"{choice} is not a valid option. Please try again. \n"
-                )
+                    raise ValueError(
+                        f"{choice} is not a valid option. Please try again. \n"
+                    )
             except ValueError as e:
                 if "literal" in str(e):
                     print(f"Invalid data: {e}, please use a number (1-2).\n")
@@ -448,7 +468,7 @@ def final_fight():
                     print(e)
         else:
             break
-    
+
     print("The wizard waves his hands in an intricate pattern before fire begins")
     print("to erupt from his fingertips. An attack is coming, you need to act. \n")
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
@@ -472,11 +492,11 @@ def final_fight():
                 input(colours.GREEN + "Press Enter to return to the Main Menu... \n" + colours.ENDC)
                 main_menu()
             elif battle_choice == 2:
-                break 
+                break
             else:
-                raise ValueError ( 
-                f"{choice} is not a valid option. Please try again. \n"
-                )
+                raise ValueError(
+                    f"{choice} is not a valid option. Please try again. \n"
+                    )
         except ValueError as e:
             if "literal" in str(e):
                 print(f"Invalid data: {e}, please use a number (1-2).\n")
@@ -521,20 +541,21 @@ def final_fight():
                 print("unsavoury things about warlocks... \n")
                 print(colours.RED + "GAME OVER \n" + colours.ENDC)
                 input(colours.GREEN + "Press Enter to return to the Main Menu... \n" + colours.ENDC)
-                main_menu() 
+                main_menu()
             else:
-                raise ValueError ( 
-                f"{choice} is not a valid option. Please try again. \n"
-                )
+                raise ValueError(
+                    f"{choice} is not a valid option. Please try again. \n"
+                    )
         except ValueError as e:
             if "literal" in str(e):
                 print(f"Invalid data: {e}, please use a number (1-2).\n")
             else:
                 print(e)
 
+
 def surrender():
     """
-    User surrenders fight, is given some story content, and then the main_menu loads.
+    User surrenders fight, is given story content, then the main_menu loads.
     """
     print("As the air around you swirls and rage, light appearing from random corners")
     print("of the dim room, you are unable to act, to move, to even think. \n")
@@ -554,10 +575,11 @@ def surrender():
     input(colours.GREEN + "Press Enter to return to the Main Menu... \n" + colours.ENDC)
     main_menu()
 
+
 def credits():
     """
-    Function that tells the end of the story if the User is successful in final_room().
-    Recalls the main_menu() when done.
+    Function that tells the end of the story if the User
+    is successful in final_room(). Recalls main_menu() when done.
     """
     print("You drop your armaments to the floor and take it all in.")
     print("How long have you been here? A few hours? Days? A lot happened in that time.")
@@ -589,10 +611,12 @@ def credits():
     input(colours.GREEN + "Press Enter to return to the Main Menu. \n" + colours.ENDC)
     main_menu()
 
+
 inventory = {
     "sword": False,
     "shield": False,
     "secret_item": False
 }
+
 
 main_menu()
