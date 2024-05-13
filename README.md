@@ -26,7 +26,7 @@
 ## Introduction
 P-thon Adventure is short text-base adventure game with a combination of the "Choose your own adventure" style story telling with video game
 style choices. Some trial and error may be necessary to pass certain tasks and it is recommended to play through the game fully at least twice
-for the complete experience.
+for the complete experience. It is available to play [Here](https://pthon-adventure-495f797de9f6.herokuapp.com/).
 
 ### Site Goals
 - To provide an enjoyable and narrative interactive story experience.
