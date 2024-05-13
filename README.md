@@ -90,6 +90,25 @@ I installed the pycodestyle module to GitPod and I checked the code for PEP8 com
 - run.py:592:1: E305 expected 2 blank lines after class or function definition, found 1
 - run.py:598:12: W292 no newline at end of file
 
+After running the checker again multiple times throughout the process, I was only left with one error:
+
+- run.py:51:80: E501 line too long (116 > 79 characters)
+
+I changed as many of these as I could, however some were not possible to change without incurring other issues.
+This line in question, line 51, is long due to needing to keep up with my convention of colouring inputs.
+Attempting to follow PEP8's "implied line indentation" did not work as it then provided errors:
+
+- run.py:53:17: E128 continuation line under-indented for visual indent
+
+When I indented to a certain point, it changed to:
+
+- run.py:52:33: E127 continuation line over-indented for visual indent
+
+The issue with this was the the over-indentation occurred one space (not tab spacing) over being under-indented. There was no sweet spot.
+I also could not get "explicit line indentation" to work with the parameters I set. As such, I have left this particular inconsistancy
+so as to not impair the function of the program.
+It is something that I will need to work in the future and will come back to fix at a later time.
+
 ### Bugs
 
 - When selecting a path on the main_menu() function, the test print ran as expected and then the User was prompted to enter an input value again, initiating an infinite loop.
