@@ -9,7 +9,6 @@
     * [Features](#Features)
     * [Features left to Implement](#Features-Left-to-Implement)
 * [Logical Flow](#Logical-Flow)
-* [Database Design](#Database-Design)
 * [Technologies](#Technologies)
 * [Testing](#Testing)
     * [Functional Testing](#Functional-Testing)
@@ -64,8 +63,6 @@ Secret Room:<br>
 Final Room:<br>
 ![Flowchart Final Room](docs/readme_images/flow_final_room.PNG)<br><br>
 
-## Database Design
-
 ## Technologies
 - Python:
     Used as the primary programming language for the entire project, except the pre-defined packages.
@@ -104,37 +101,3 @@ Changed the code to if fight_choice == 1 and inventory[sword] == False to rectif
 - [W3Schools](https://www.w3schools.com/python/python_regex.asp) for information on how to check string using RegEx.
 - User Kevin Chou on [Stack Overflow](https://stackoverflow.com/questions/37340049/how-do-i-print-colored-output-to-the-terminal-in-python) for the information on setting colour console text.
 - [Regex101](https://regex101.com/) as a RegEx syntax checking site to ensure what I used worked correctly.
-
-
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-Welcome,
-
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
-
-## Reminders
-
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
