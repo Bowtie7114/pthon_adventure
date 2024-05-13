@@ -383,7 +383,8 @@ def final_room():
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
     print("If you could roll your eyes at the name, you would.")
     print('"You are dead. If you didnt guess already, but I brought you back!"')
-    print('"Got rid of all that pesky skin for ya too. I will take my thanks now." \n')
+    print('"Got rid of all that pesky skin for ya too, makes it much easier to do')
+    print('chores when you dont get tired or bruised! Thank me anytime, by the way." \n')
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
     print("The only thought racing through your mind is that he did this to you.")
     print("If he brought you back, then taking him out will end your suffering.")
@@ -417,9 +418,9 @@ def final_fight():
                 print("Choose how to fight: \n")
                 print("1: Sword and Shield")
                 print("2: Secret Weapon \n")
-                weapon_choice = int(input(colours.GREEN + "Press Enter after making your choice..." + colours.ENDC))
+                weapon_choice = int(input(colours.GREEN + "Press Enter after making your choice... \n" + colours.ENDC))
                 if weapon_choice == 1:
-                    continue
+                    break
                 elif weapon_choice == 2:
                     print("You drop the sword out of your dominant hand and unsheath the weapon")
                     print("you found in the secret passage. Pointing it at the wizard, you know")
@@ -445,7 +446,7 @@ def final_fight():
                 else:
                     print(e)
         else:
-            continue
+            break
     
     print("The wizard waves his hands in an intricate pattern before fire begins")
     print("to erupt from his fingertips. An attack is coming, you need to act. \n")
@@ -454,19 +455,81 @@ def final_fight():
     print("1: Attack")
     print("2: Defend \n")
 
-    battle_choice = int(input(colours.GREEN + "Press Enter after making your choice..." + colours.ENDC))
-    if battle_choice == 1:
-        print("You charge in for an attack and swing your sword horizontally, hoping")
-        print("to strike the wizard's chest. However, the wizard fires a volley of")
-        print("fireballs before your blow connects. \n")
-        input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
-        print("The fireballs hit your ribs, arms, legs - everwhere, each shattering")
-        print("upon the incredible force of the spells.\n")
-        print("The world goes black before you know it...\n")
-        input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
-        print(colours.RED + "GAME OVER \n" + colours.ENDC)
-        input(colours.GREEN + "Press Enter to return to the Main Menu... \n" + colours.ENDC)
-        main_menu()
+    while True:
+        try:
+            battle_choice = int(input(colours.GREEN + "Press Enter after making your choice... \n" + colours.ENDC))
+            if battle_choice == 1:
+                print("You charge in for an attack and swing your sword horizontally, hoping")
+                print("to strike the wizard's chest. However, the wizard fires a volley of")
+                print("fireballs before your blow connects. \n")
+                input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+                print("The fireballs hit your ribs, arms, legs - everwhere, each shattering")
+                print("upon the incredible force of the spells.\n")
+                print("The world goes black before you know it...\n")
+                input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+                print(colours.RED + "GAME OVER \n" + colours.ENDC)
+                input(colours.GREEN + "Press Enter to return to the Main Menu... \n" + colours.ENDC)
+                main_menu()
+            elif battle_choice == 2:
+                break 
+            else:
+                raise ValueError ( 
+                f"{choice} is not a valid option. Please try again. \n"
+                )
+        except ValueError as e:
+            if "literal" in str(e):
+                print(f"Invalid data: {e}, please use a number (1-2).\n")
+            else:
+                print(e)
+
+    print("Predicting the incoming attack, you raise your shield and stand your ground.")
+    print("A large fireball manifests in the air above the Old Man who waves his hand")
+    print("towards you, hurtling the fireball at you. \n")
+    input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+    print("You duck your skull behind the shield and brace as a massive impact rocks")
+    print("you to the core, a blinding flash of light accompanying the tremors. \n")
+    input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+    print("Though your head is still covered by the shield, you hear the wizard")
+    print("panting - that must have taken a lot out of him. What will you do now? \n")
+    print("1: Attack")
+    print("2: Defend \n")
+
+    while True:
+        try:
+            battle_choice2 = int(input(colours.GREEN + "Press Enter after making your choice... \n" + colours.ENDC))
+            if battle_choice2 == 1:
+                print("Sensing your opportunity, you quickly lower your shield and charge the old man,")
+                print("swinging your sword across the chest, making a deep cut into the wizard. \n")
+                input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+                print("The wizard stumbles backwards, unable to catch his breath. You stay at the")
+                print("ready just in case but notice that, just as the wizard falls to the ground,")
+                print("he seems to smile ever so slightly at you...")
+                input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+                print("The Old Man hits the ground with a thump... \n")
+                input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+                credits()
+            elif battle_choice2 == 2:
+                print("Not taking any chances, you stay hidden beneath your shield for a moment...")
+                input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+                print("As you notice your head suddenly moving without your body, you realise")
+                print("that may have been a mistake. The wizard removed your head from your")
+                print("shoulders when you weren't looking! \n")
+                input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+                print("The wizard proceeds to lecture you on being grateful, going on long")
+                print("tangents about his youth, the perfect blueberry pie, and some very")
+                print("unsavoury things about warlocks... \n")
+                print(colours.RED + "GAME OVER \n" + colours.ENDC)
+                input(colours.GREEN + "Press Enter to return to the Main Menu... \n" + colours.ENDC)
+                main_menu() 
+            else:
+                raise ValueError ( 
+                f"{choice} is not a valid option. Please try again. \n"
+                )
+        except ValueError as e:
+            if "literal" in str(e):
+                print(f"Invalid data: {e}, please use a number (1-2).\n")
+            else:
+                print(e)
 
 def surrender():
     """
