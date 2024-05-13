@@ -68,7 +68,8 @@ Final Room:<br>
 
 ## Technologies
 - Python:
-    Used as the primary programming language for the entire project, except the pre-defined packages.
+    Used as the primary programming language for the entire project, except the pre-defined packages
+    and the RegEx library, used to check the continue code input.
 - Gitpod:
     Used as the IDE to write, test, and modify the programme.
 - Github:
@@ -119,6 +120,7 @@ revealed another bug;
 Changed the code to if fight_choice == 1 and inventory[sword] == False to rectify.
 
 ## Deployment
+
 
 ## Credits
 - Code institute for providing the pre-installed code to run the code via browser-based terminal.
