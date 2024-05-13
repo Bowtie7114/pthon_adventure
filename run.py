@@ -111,6 +111,8 @@ def how_to_play():
     print("If you forget your code, or do not write it down,")
     print("you will need to start from the beginning. \n")
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+    print("If you need to restart the game, press the Run Program button above. \n")
+    input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
     print("Have fun! \n")
     input(colours.GREEN + "Press Enter to return to the Main Menu... \n" + colours.ENDC)
     main_menu()
