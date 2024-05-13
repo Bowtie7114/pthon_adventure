@@ -104,13 +104,13 @@ def how_to_play():
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
     print("When you enter a room, you will be given a code. Write this code down!")
     print("It is a save state that monitors the room you just entered and your current")
-    print("inventory.")
+    print("inventory. \n")
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
     print("If you forget your code, or do not write it down,")
     print("you will need to start from the beginning. \n")
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
-    print("Have fun! When you are ready, press 'Enter' to go back to the Main Menu.")
-    input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+    print("Have fun! \n")
+    input(colours.GREEN + "Press Enter to return to the Main Menu... \n" + colours.ENDC)
     main_menu()
 
 
@@ -280,8 +280,8 @@ def second_room_look():
     options. 
     '''
 
-    print("You feel off about looking through this goblin's room, especially")
-    print("with the corpse still there, but you may need something else to")
+    print("You feel off looking through this goblin's room, especially")
+    print("with the corpse still there, but you may find something else to")
     print("help you with the remainder of your journey. \n")
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
     print("After some respectful rummaging, you find a metal kite shield embellished")
@@ -297,7 +297,7 @@ def second_room_look():
     print("What will you do?")
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
     print("1. Move to the Final Room")
-    print("2. Look around again")
+    print("2. Look around again \n")
 
     choice(colours.GREEN + "Press the 'Enter' key after making your selection. \n" + colours.ENDC, final_room, second_room_second_look)
 
@@ -307,11 +307,11 @@ def second_room_second_look():
     Moves on to secret_room().
     '''
     print("This time around you searched the walls themselves. You noticed that")
-    print("some of the bricks were slightly off colour compared to the rest.")
+    print("some of the bricks were slightly off colour compared to the rest. \n")
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
     print("After touching and prodding and pushing, you move the wall itself to the side")
     print("revealing a hidden passage. Perhaps it leads outside, or to whatever did this")
-    print("to you! Only one way to find out...")
+    print("to you! Only one way to find out... \n")
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
 
     secret_room()
@@ -406,7 +406,67 @@ def final_fight():
     as normal with the sword and shield. If they do have the secret_item, it gives them the choice
     as to whether they use that or the sword and shield.
     """
-    print("Brave Skelly-boy")
+    print("Despite your shaking bones and an overwhelming sense of dread,")
+    print("you stand firm, weapons at the ready - do or die... Again! \n")
+    input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+    print('"I hope you are ready, Skelly-boy! Here comes some magic!" \n')
+
+    while True:
+        if inventory["secret_item"] == True:
+            try:
+                print("Choose how to fight: \n")
+                print("1: Sword and Shield")
+                print("2: Secret Weapon \n")
+                weapon_choice = int(input(colours.GREEN + "Press Enter after making your choice..." + colours.ENDC))
+                if weapon_choice == 1:
+                    continue
+                elif weapon_choice == 2:
+                    print("You drop the sword out of your dominant hand and unsheath the weapon")
+                    print("you found in the secret passage. Pointing it at the wizard, you know")
+                    print("not what it will do, only that it will be effective. \n")
+                    input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+                    print("The wizard suddenly stops and blurts out:")
+                    print('"Wait... Is that a gun?? Where the hell did you even get that??" \n')
+                    input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+                    print("Sensing the wizard's fear, you aim and pull the trigger. \n")
+                    input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+                    print("A loud crack fills the air and the wizard drops to the ground.")
+                    print("You are not sure what this 'gun' is, but it certainly worked. \n")
+                    input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+                    credits()
+                    break
+                else:
+                    raise ValueError ( 
+                    f"{choice} is not a valid option. Please try again. \n"
+                )
+            except ValueError as e:
+                if "literal" in str(e):
+                    print(f"Invalid data: {e}, please use a number (1-2).\n")
+                else:
+                    print(e)
+        else:
+            continue
+    
+    print("The wizard waves his hands in an intricate pattern before fire begins")
+    print("to erupt from his fingertips. An attack is coming, you need to act. \n")
+    input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+    print("What do you do? \n")
+    print("1: Attack")
+    print("2: Defend \n")
+
+    battle_choice = int(input(colours.GREEN + "Press Enter after making your choice..." + colours.ENDC))
+    if battle_choice == 1:
+        print("You charge in for an attack and swing your sword horizontally, hoping")
+        print("to strike the wizard's chest. However, the wizard fires a volley of")
+        print("fireballs before your blow connects. \n")
+        input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+        print("The fireballs hit your ribs, arms, legs - everwhere, each shattering")
+        print("upon the incredible force of the spells.\n")
+        print("The world goes black before you know it...\n")
+        input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+        print(colours.RED + "GAME OVER \n" + colours.ENDC)
+        input(colours.GREEN + "Press Enter to return to the Main Menu... \n" + colours.ENDC)
+        main_menu()
 
 def surrender():
     """
@@ -447,7 +507,7 @@ def credits():
     print("skeleton is no way to live, after all. You let yourself slowly fade, at")
     print("peace that you can rest... \n")
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
-    print("...")
+    print("... \n")
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
     print("Did you hear a sound?...")
     print('"...can....... -tle more..."')
@@ -461,7 +521,7 @@ def credits():
     print("Before you fall asleep, you hear one final phrase:")
     print('"Congratulations! Your baby is healthy and whole..." \n')
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
-    print("The end. Thank you for playing!")
+    print("The end. Thank you for playing! \n")
     input(colours.GREEN + "Press Enter to return to the Main Menu. \n" + colours.ENDC)
     main_menu()
 
