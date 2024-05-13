@@ -12,7 +12,7 @@
 * [Technologies](#Technologies)
 * [Testing](#Testing)
     * [Functional Testing](#Functional-Testing)
-    * [Pep8 Validation](#Pep8-Validation)
+    * [PEP 8 Checker](#PEP-8-Checker)
     * [Bugs and Fixes](#Bugs-and-Fixes)
 * [Deployment](#Deployment)
     * [Version Control](#Version-Control)
@@ -45,7 +45,10 @@ autosave messages.
 
 ## Structure
 ### Features
-
+- Upon testing the ability to create a save file for the User, I discovered that the file saved to the directory when not given a path to follow. This was set to the Downloads folder
+for the User, however I then learned that this would not work as the IDE and Heroku host both utilise a web browser, which did not give access to the User's files. As such, the
+Save File system was removed for a Dictionary for the Inventory system and a Code-based Save System; the User is given a code based on the room they were last in and the items they had
+at that time which, when given at the continue_game function, loads the appropriate room/dictionary values.
 
 ## Logical Flow
 Main Menu:<br>
@@ -74,11 +77,18 @@ Final Room:<br>
     Used as the hosting platform, allowing Users to activate the program in their web browser.
 
 ## Testing
+### PEP 8 Checker
+I installed the pycodestyle module to GitPod and I checked the code for PEP8 compliance by typing pycodestyle --first run.py. I received the following errors:
 
-- Upon testing the ability to create a save file for the User, I discovered that the file saved to the directory when not given a path to follow. This was set to the Downloads folder
-for the User, however I then learned that this would not work as the IDE and Heroku host both utilise a web browser, which did not give access to the User's files. As such, the
-Save File system was removed for a Dictionary for the Inventory system and a Code-based Save System; the User is given a code based on the room they were last in and the items they had
-at that time which, when given at the continue_game function, loads the appropriate room/dictionary values.
+- run.py:3:1: E302 expected 2 blank lines, found 1
+- run.py:13:80: E501 line too long (81 > 79 characters)
+- run.py:46:1: W293 blank line contains whitespace
+- run.py:57:33: E211 whitespace before '('
+- run.py:96:87: W291 trailing whitespace
+- run.py:221:57: E712 comparison to False should be 'if cond is False:' or 'if not cond:'
+- run.py:442:21: E122 continuation line missing indentation or outdented
+- run.py:592:1: E305 expected 2 blank lines after class or function definition, found 1
+- run.py:598:12: W292 no newline at end of file
 
 ### Bugs
 
