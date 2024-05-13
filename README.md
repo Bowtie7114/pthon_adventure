@@ -26,8 +26,18 @@
 
 ## Introduction
 
+### Site Goals
+
+### Target Audience
+
+### User Stories
+
+
+### Features Planned
 
 ## Structure
+### Features
+
 
 ## Logical Flow
 Main Menu:<br>
