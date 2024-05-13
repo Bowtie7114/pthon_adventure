@@ -21,19 +21,27 @@
     * [Heroku Deployment](#Heroku-Deployment)
     * [Clone Locally](Clone-Locally)
 * [Credits](#Credits)
-  * [Content](#Content)
+
 
 
 ## Introduction
+P-thon Adventure is short text-base adventure game with a combination of the "Choose your own adventure" style story telling with video game
+style choices. Some trial and error may be necessary to pass certain tasks and it is recommended to play through the game fully at least twice
+for the complete experience.
 
 ### Site Goals
+- To provide an enjoyable and narrative interactive story experience.
 
 ### Target Audience
-
-### User Stories
-
+- Fans of video games, text-based adventure games, and "Choose your own adventures".
 
 ### Features Planned
+- A save file that downloads to the User's downloads folder, saving the last known location and state of the User's inventory.
+- A choice system offering a trial-and-error style of gameplay.
+- Coloured codes for various states, for example: Green for when an Input is needed, Red for a game over, Blue for inventory updates, and Yellow for 
+autosave messages.
+- Multiple endings based on the User's decisions.
+- Prevention of the User entering invalid commands, e.g. when making choices.
 
 ## Structure
 ### Features
