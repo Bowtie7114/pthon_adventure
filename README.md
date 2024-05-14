@@ -138,7 +138,10 @@ To deploy to Heroku, apart from creating an account, the below steps were follow
 - Choose an App name and a hosting region, then select "Create app".
 - Go to the Settings and add two Buildpacks: Python and NodeJS in that order.
 - Go to the Settings to add a Config Vars: PORT 8000.
-- 
+- Select "Deploy" from the top menu.
+- Link GitHub by setting it as the deployment method, searching for the repository name, and selecting "Connect".
+- Scroll down, leaving the default settings to deploy from the main branch.
+- Click "Deploy Branch". Wait for the deployment and select the "View" button to access the application.
 
 ### Clone Locally
 To clone this repository locally, enter the following into your chosen IDE:
