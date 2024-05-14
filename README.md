@@ -45,6 +45,23 @@ autosave messages.
 
 ## Structure
 ### Features
+
+- Main Menu:
+As the program loads, the main menu loads automatically, welcoming the player and providing 3 options to choose from.
+Selecting 1: for New Game loads the first_room function and begins the game. Selecting 2: Continue, prompts the player
+to enter a code to load a save state. Selecting 3: How to Play, provides insturctions on navigating the game.<br>
+
+![Main Menu](docs/readme_images/main_menu.PNG) <br>
+
+- Continue:
+The User is prompted to enter a code. A RegEx function in the background checks that the code matches the assigned format;
+00[1-3]s[0,1]sh[0,1]si[0,1].
+If this code entered matches, then the correct room function is loaded and the correct inventory items are set.
+
+![Continue](docs/readme_images/continue.PNG) <br>
+
+- How to Play:
+
 - Upon testing the ability to create a save file for the User, I discovered that the file saved to the directory when not given a path to follow. This was set to the Downloads folder
 for the User, however I then learned that this would not work as the IDE and Heroku host both utilise a web browser, which did not give access to the User's files. As such, the
 Save File system was removed for a Dictionary for the Inventory system and a Code-based Save System; the User is given a code based on the room they were last in and the items they had
@@ -65,6 +82,9 @@ Secret Room:<br>
 
 Final Room:<br>
 ![Flowchart Final Room](docs/readme_images/flow_final_room.PNG)<br><br>
+
+As the project evolved, more functions were added, removed, and changed than originally intended,
+but this basis allowed me to focus on the basic beginning and ending that I envisioned.
 
 ## Technologies
 - Python:
