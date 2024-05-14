@@ -121,6 +121,10 @@ but this basis allowed me to focus on the basic beginning and ending that I envi
     Used as the recording software to create the gif of the program.
 
 ## Testing
+### Functional Testing
+
+
+
 ### PEP 8 Checker
 I installed the pycodestyle module to GitPod and I checked the code for PEP8 compliance by typing ```pycodestyle --first run.py```. I received the following errors:
 
