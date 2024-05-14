@@ -27,7 +27,6 @@ style choices. Some trial and error may be necessary to pass certain tasks and i
 for the complete experience. It is available to play [Here](https://pthon-adventure-495f797de9f6.herokuapp.com/). <br>
 
 
-
 ### Site Goals
 - To provide an enjoyable and narrative interactive story experience.
 
@@ -46,6 +45,11 @@ autosave messages.
 ## Structure
 ### Features
 
+- Upon testing the ability to create a save file for the User, I discovered that the file saved to the directory when not given a path to follow. This was set to the Downloads folder
+for the User, however I then learned that this would not work as the IDE and Heroku host both utilise a web browser, which did not give access to the User's files. As such, the
+Save File system was removed for a Dictionary for the Inventory system and a Code-based Save System; the User is given a code based on the room they were last in and the items they had
+at that time which, when given at the continue_game function, loads the appropriate room/dictionary values.
+
 - Main Menu:
 As the program loads, the main menu loads automatically, welcoming the player and providing 3 options to choose from.
 Selecting 1: for New Game loads the first_room function and begins the game. Selecting 2: Continue, prompts the player
@@ -61,11 +65,27 @@ If this code entered matches, then the correct room function is loaded and the c
 ![Continue](docs/readme_images/continue.PNG) <br>
 
 - How to Play:
+A series of instructions that help the User navigate the site. As mentioned in this function, players are prompted
+to make decisions based on what is happening. They must press Enter to move on with text, allowing them to read at their
+own pace. Any choices not allowed invoke an error stating to try again. 
 
-- Upon testing the ability to create a save file for the User, I discovered that the file saved to the directory when not given a path to follow. This was set to the Downloads folder
-for the User, however I then learned that this would not work as the IDE and Heroku host both utilise a web browser, which did not give access to the User's files. As such, the
-Save File system was removed for a Dictionary for the Inventory system and a Code-based Save System; the User is given a code based on the room they were last in and the items they had
-at that time which, when given at the continue_game function, loads the appropriate room/dictionary values.
+![How to Play](docs/readme_images/how_to_play.PNG)<br>
+
+As the rest of the room functions operate in similar fashions, not all will be shown moving forwards.
+
+The three major rooms provide a room code. This code is generated using a function that takes the current room and combines
+the state of the dictionary as a code. For example, if there is no sword in room one, it will read 001s0sh0si0, but if the sword was
+present it would read 001s1sh0si0. <br>
+
+![Room code](docs/readme_images/room_code.PNG)<br>
+
+Player decisions are made by entering a number in the console and pressing 'Enter'. The majority of these are conditionals
+(if/elif/else) statements, wrapped in try/excepts, wrapped in a while loop. The loop is broken once a decision is made, unless it
+invokes an error, in which the User is prompted to try again. Should an inventory item be needed in the 'inventory' dictionary,
+the User may lose an encounter or not receive a specific prompt. <br>
+
+![Errors](docs/readme_images/errors.PNG)
+
 
 ## Logical Flow
 Main Menu:<br>
