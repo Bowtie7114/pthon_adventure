@@ -3,7 +3,6 @@
 * [Introduction](#Introduction)
     * [Site Goals](#Site-Goals)
     * [Target Audience](#Target-Audience)
-    * [User stories](#User-Stories)
     * [Features Planned](#Features-Planned)
 * [Structure](#Structure)
     * [Features](#Features)
@@ -16,7 +15,6 @@
     * [Bugs and Fixes](#Bugs-and-Fixes)
 * [Deployment](#Deployment)
     * [Version Control](#Version-Control)
-    * [MongoDB Setup](#MongoDB-Setup)
     * [Heroku Deployment](#Heroku-Deployment)
     * [Clone Locally](Clone-Locally)
 * [Credits](#Credits)
@@ -26,7 +24,9 @@
 ## Introduction
 P-thon Adventure is short text-base adventure game with a combination of the "Choose your own adventure" style story telling with video game
 style choices. Some trial and error may be necessary to pass certain tasks and it is recommended to play through the game fully at least twice
-for the complete experience. It is available to play [Here](https://pthon-adventure-495f797de9f6.herokuapp.com/).
+for the complete experience. It is available to play [Here](https://pthon-adventure-495f797de9f6.herokuapp.com/). <br>
+
+
 
 ### Site Goals
 - To provide an enjoyable and narrative interactive story experience.
@@ -120,6 +120,11 @@ revealed another bug;
 Changed the code to if fight_choice == 1 and inventory[sword] == False to rectify.
 
 ## Deployment
+### Version Control
+
+### Heroku Deployment
+
+### Clone Locally
 
 
 ## Credits
