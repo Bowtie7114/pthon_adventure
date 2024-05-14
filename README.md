@@ -132,9 +132,17 @@ Said commands used to push to the repository are:
 ```git push``` will then update the repository with all of the previously committed code, including their messages and timestamps, to the GitHub repository linked to the IDE.
 
 ### Heroku Deployment
+To deploy to Heroku, apart from creating an account, the below steps were followed:
+
+- Sign in to Heroku and click the "New App" button on the homepage.
+- Choose an App name and a hosting region, then select "Create app".
+- Go to the Settings and add two Buildpacks: Python and NodeJS in that order.
+- Go to the Settings to add a Config Vars: PORT 8000.
+- 
 
 ### Clone Locally
-
+To clone this repository locally, enter the following into your chosen IDE:
+- ```git clone https://github.com/Bowtie7114/pthon-adventure.git```
 
 ## Credits
 - Code institute for providing the pre-installed code to run the code via browser-based terminal.
