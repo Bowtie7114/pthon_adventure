@@ -1,7 +1,12 @@
+""" Modules imported into Python """
 import re
-
+import os
 
 class colours:
+    """
+    Class allows for text to appear different colours
+    in the terminal. ENDC used to change back to the default.
+    """
     RED = '\033[31m'
     GREEN = '\033[32m'
     ENDC = '\033[m'
@@ -40,6 +45,7 @@ def main_menu():
     Continue the previous save state or the help menu for information
     on how to play the game.
     """
+    os.system("clear")
     print("Welcome to P-thon, a short Python console-based adventure game.")
     print("Please enter 1: for New Game")
     print("2: for Continue")
@@ -76,13 +82,13 @@ def continue_game():
     the correct room and inventory in the inventory
     dictionary that the User had at that time.
     """
-    code = input(colours.GREEN + "Please enter your code and press Enter... \nTo return to Main Menu, type exit and press Enter... \n" + colours.ENDC)
+    code = input(colours.GREEN + "\nPlease enter your code and press Enter... \nTo return to Main Menu, type exit and press Enter... \n" + colours.ENDC)
 
     check_code = re.compile("^00[0-3]s[0,1]sh[0,1]si[0,1]$")
     if code == "exit":
         main_menu()
     if not check_code.match(code):
-        print("This code is not valid. Please enter a valid code. \n")
+        print("\nThis code is not valid. Please enter a valid code. \n")
         continue_game()
 
     if code[4] == "1":
@@ -105,6 +111,7 @@ def how_to_play():
     User must select Enter key to
     end function and move back to main_menu().
     """
+    os.system('clear')
     print("P-thon is a text-based mini-adventure played entirely in the console. \n")
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
     print("You will need to type numbers when prompted to make decisions ")
@@ -155,7 +162,7 @@ def first_room():
     first_room_look(). User can use Move without
     the Look function.
     """
-
+    os.system('clear')
     save_codes("001")
 
     print("....... \n")
@@ -184,6 +191,7 @@ def first_room_look():
     user's inventory. The moves user
     automatically to second_room().
     '''
+    os.system('clear')
     print("You decide to look around the room for anything you can use,")
     print("you are uncertain what lies ahead of that door after all. \n")
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
@@ -212,7 +220,7 @@ def second_room():
     If they attack without a sword, they fail.
     If they attack with a sword, they succeed.
     '''
-
+    os.system('clear')
     save_codes("002")
 
     print("....... \n")
@@ -295,7 +303,7 @@ def second_room_look():
     Provides user with shield item.
     Provides Move and Look Again options.
     '''
-
+    os.system('clear')
     print("You feel off looking through this goblin's room, especially")
     print("with the corpse still there, but you may find something else to")
     print("help you with the remainder of your journey. \n")
@@ -323,6 +331,7 @@ def second_room_second_look():
     Provides context to User that they find something in the wall.
     Moves on to secret_room().
     '''
+    os.system('clear')
     print("This time around you searched the walls themselves. You noticed that")
     print("some of the bricks were slightly off colour compared to the rest. \n")
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
@@ -340,6 +349,7 @@ def secret_room():
     A secret_room_item is added to the User's inventory and then
     immediately activates final_room().
     """
+    os.system('clear')
     print("You walk through a dimly lit tunnel for what seems to be over an hour. \n")
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
     print("The only sounds are your own footsteps and the gentle crackling of each torch")
@@ -382,7 +392,7 @@ def final_room():
     get the option to use it, immediately succeeding the fight.
     Upon succeeding, credits roll and main_menu() is loaded.
     '''
-
+    os.system('clear')
     save_codes("003")
 
     print("....... \n")
@@ -428,6 +438,7 @@ def final_fight():
     as normal with the sword and shield. If they do have the secret_item
     it gives them the choice to use that or the sword and shield.
     """
+    os.system('clear')
     print("Despite your shaking bones and an overwhelming sense of dread,")
     print("you stand firm, weapons at the ready - do or die... Again! \n")
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
@@ -557,6 +568,7 @@ def surrender():
     """
     User surrenders fight, is given story content, then the main_menu loads.
     """
+    os.system('clear')
     print("As the air around you swirls and rage, light appearing from random corners")
     print("of the dim room, you are unable to act, to move, to even think. \n")
     input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
@@ -581,6 +593,7 @@ def credits():
     Function that tells the end of the story if the User
     is successful in final_room(). Recalls main_menu() when done.
     """
+    os.system('clear')
     print("You drop your armaments to the floor and take it all in.")
     print("How long have you been here? A few hours? Days? A lot happened in that time.")
     print("But now the door to freedom lies in front of you, and you plan to take it. \n")
