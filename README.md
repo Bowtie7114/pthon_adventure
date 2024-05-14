@@ -79,31 +79,31 @@ Final Room:<br>
 
 ## Testing
 ### PEP 8 Checker
-I installed the pycodestyle module to GitPod and I checked the code for PEP8 compliance by typing pycodestyle --first run.py. I received the following errors:
+I installed the pycodestyle module to GitPod and I checked the code for PEP8 compliance by typing ```pycodestyle --first run.py```. I received the following errors:
 
-- run.py:3:1: E302 expected 2 blank lines, found 1
-- run.py:13:80: E501 line too long (81 > 79 characters)
-- run.py:46:1: W293 blank line contains whitespace
-- run.py:57:33: E211 whitespace before '('
-- run.py:96:87: W291 trailing whitespace
-- run.py:221:57: E712 comparison to False should be 'if cond is False:' or 'if not cond:'
-- run.py:442:21: E122 continuation line missing indentation or outdented
-- run.py:592:1: E305 expected 2 blank lines after class or function definition, found 1
-- run.py:598:12: W292 no newline at end of file
+- ```run.py:3:1: E302 expected 2 blank lines, found 1```
+- ```run.py:13:80: E501 line too long (81 > 79 characters)```
+- ```run.py:46:1: W293 blank line contains whitespace```
+- ```run.py:57:33: E211 whitespace before '('```
+- ```run.py:96:87: W291 trailing whitespace```
+- ```run.py:221:57: E712 comparison to False should be 'if cond is False:' or 'if not cond:'```
+- ```run.py:442:21: E122 continuation line missing indentation or outdented```
+- ```run.py:592:1: E305 expected 2 blank lines after class or function definition, found 1```
+- ```run.py:598:12: W292 no newline at end of file```
 
 After running the checker again multiple times throughout the process, I was only left with one error:
 
-- run.py:51:80: E501 line too long (116 > 79 characters)
+- ```run.py:51:80: E501 line too long (116 > 79 characters)```
 
 I changed as many of these as I could, however some were not possible to change without incurring other issues.
 This line in question, line 51, is long due to needing to keep up with my convention of colouring inputs.
 Attempting to follow PEP8's "implied line indentation" did not work as it then provided errors:
 
-- run.py:53:17: E128 continuation line under-indented for visual indent
+- ```run.py:53:17: E128 continuation line under-indented for visual indent```
 
 When I indented to a certain point, it changed to:
 
-- run.py:52:33: E127 continuation line over-indented for visual indent
+- ```run.py:52:33: E127 continuation line over-indented for visual indent```
 
 The issue with this was the the over-indentation occurred one space (not tab spacing) over being under-indented. There was no sweet spot.
 I also could not get "explicit line indentation" to work with the parameters I set. As such, I have left this particular inconsistancy
@@ -114,13 +114,22 @@ It is something that I will need to work in the future and will come back to fix
 
 - When selecting a path on the main_menu() function, the test print ran as expected and then the User was prompted to enter an input value again, initiating an infinite loop.
 Adding a break after each option removed the infinite loop.
-- When testing the first fight scene, received error code: function choice at 0x7f20da532020. I had forgotten to change the fight_choice input to an int(). Changing this allowed the code to function, but then 
+- When testing the first fight scene, received error code: ```function choice at 0x7f20da532020```. I had forgotten to change the fight_choice input to an int(). Changing this allowed the code to function, but then 
 revealed another bug;
 - Within the if statement for fight_choice in second_room(), the first if fight_choice == 1 statement ended there. As such, whether or not the sword was present in the inventory, it would always run the first option.
 Changed the code to if fight_choice == 1 and inventory[sword] == False to rectify.
 
 ## Deployment
 ### Version Control
+This website was made using GitPod as the IDE which was linked to GitHub, allowing it to be saved as a remote repository named "pthon_adventure" using git commands.
+
+Said commands used to push to the repository are:
+
+```git add <file>``` which adds the file (or all changes if you use . ) to the staging area to be committed.
+
+```git commit -m "commit message"``` then commits the changes that were added previously, along with a message indicating what was changed. These commits are then queued together before being pushed.
+
+```git push``` will then update the repository with all of the previously committed code, including their messages and timestamps, to the GitHub repository linked to the IDE.
 
 ### Heroku Deployment
 
