@@ -26,6 +26,7 @@ P-thon Adventure is short text-base adventure game with a combination of the "Ch
 style choices. Some trial and error may be necessary to pass certain tasks and it is recommended to play through the game fully at least twice
 for the complete experience. It is available to play [Here](https://pthon-adventure-495f797de9f6.herokuapp.com/). <br>
 
+![Game gif](docs/readme_images/game_gif.gif)<br>
 
 ### Site Goals
 - To provide an enjoyable and narrative interactive story experience.
@@ -116,6 +117,8 @@ but this basis allowed me to focus on the basic beginning and ending that I envi
     Used as the repository to store the code and README.
 - Heroku:
     Used as the hosting platform, allowing Users to activate the program in their web browser.
+- Screenpal:
+    Used as the recording software to create the gif of the program.
 
 ## Testing
 ### PEP 8 Checker
@@ -198,3 +201,5 @@ To clone this repository locally, enter the following into your chosen IDE:
 - User Kevin Chou on [Stack Overflow](https://stackoverflow.com/questions/37340049/how-do-i-print-colored-output-to-the-terminal-in-python) for the information on setting colour console text.
 - [Regex101](https://regex101.com/) as a RegEx syntax checking site to ensure what I used worked correctly.
 - Mentor [Gareth](https://github.com/Gareth-McGirr/motorcycle-rental-management/blob/main/run.py) for the use of ```os.system("clear")``` to clear the console when functions run.
+- [Screenpal](https://screenpal.com/) used as the recording software for the gif at the top of the README.
+- [Gif Maker](https://gifmaker.me/video-to-gif/) used to convert the recording of the program to a gif.
