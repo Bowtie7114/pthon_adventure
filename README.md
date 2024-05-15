@@ -126,23 +126,23 @@ but this basis allowed me to focus on the basic beginning and ending that I envi
 Below are the results of final testing of the program at each function that required more that inputs. For example, the how_to_play function and secret_room
 functions are not included as they comprise of print and inputs only. These were tested thoroughly during development and did not need further checking.
 
-Main Menu:
+Main Menu: <br>
 ![Main Menu Test](docs/readme_images/main_menu_test.PNG)<br>
 
-Continue:
+Continue: <br>
 ![Continue Test](docs/readme_images/continue_test_1.PNG)
 ![Continue Test 2](docs/readme_images/continue_test_2.PNG)<br>
 
-First Room:
+First Room: <br>
 ![First Room Test](docs/readme_images/first_room_test.PNG)<br>
 
-Second Room:
+Second Room: <br>
 ![Second Room Test](docs/readme_images/second_room_test.PNG)<br>
 
-Second Room Look:
+Second Room Look: <br>
 ![Second Room Look Test](docs/readme_images/second_room_look_test.PNG)<br>
 
-Final Room:
+Final Room: <br>
 ![Final Room Test](docs/readme_images/final_room_test.PNG)
 
 
