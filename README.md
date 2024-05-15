@@ -140,10 +140,10 @@ Second Room:
 ![Second Room Test](docs/readme_images/second_room_test.PNG)<br>
 
 Second Room Look:
-![Second Room Look Test]()<br>
+![Second Room Look Test](docs/readme_images/second_room_look_test.PNG)<br>
 
 Final Room:
-![]()
+![Final Room Test](docs/readme_images/final_room_test.PNG)
 
 
 ### PEP 8 Checker
