@@ -127,11 +127,7 @@ Below are the results of final testing of the program at each function that requ
 functions are not included as they comprise of print and inputs only. These were tested thoroughly during development and did not need further checking.
 
 Main Menu:
-![Main Menu Test](docs/readme_images/main_menu_test.PNG)
 
-Continue:
-![Continue Test](docs/readme_images/continue_test_1.PNG)
-![Continue Test 2](docs/readme_images/continue_test_2.PNG)
 
 
 ### PEP 8 Checker

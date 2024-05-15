@@ -502,8 +502,20 @@ def final_fight():
                 print(colours.RED + "GAME OVER \n" + colours.ENDC)
                 input(colours.GREEN + "Press Enter to return to the Main Menu... \n" + colours.ENDC)
                 main_menu()
-            elif battle_choice == 2:
+            elif battle_choice == 2 and inventory["shield"] is True:
                 break
+            elif battle_choice == 2 and inventory["shield"] is False:
+                print("You attempt to block what you hope is a single fireball with your sword.")
+                print("However, the wizard fires a volley of fireballs that branch to different")
+                print("areas of your body. \n")
+                input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+                print("The fireballs hit your ribs, arms, legs - everwhere, each shattering")
+                print("upon the incredible force of the spells.\n")
+                print("The world goes black before you know it...\n")
+                input(colours.GREEN + "Press Enter to continue... \n" + colours.ENDC)
+                print(colours.RED + "GAME OVER \n" + colours.ENDC)
+                input(colours.GREEN + "Press Enter to return to the Main Menu... \n" + colours.ENDC)
+                main_menu()
             else:
                 raise ValueError(
                     f"{choice} is not a valid option. Please try again. \n"
